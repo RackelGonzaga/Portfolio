@@ -1,0 +1,221 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background: linear-gradient(to bottom, #0a0a1f, #000);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #9b5cff;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.menu a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #9b5cff;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2, .hero h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #9b5cff;
+}
+
+.btn {
+  background: #9b5cff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #6f34d8;
+}
+
+/* About */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.about img {
+  max-width: 200px;
+  border-radius: 12px;
+}
+
+.stats {
+  margin-top: 1rem;
+  color: #9b5cff;
+}
+
+/* Journey */
+.journey {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.journey-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.journey-box {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 300px;
+}
+
+/* Skills */
+.skills {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.bar {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.bar span {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #6f34d8, #9b5cff);
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0,0,0,0.8);
+  margin-top: 2rem;
+}
+
+/* Typewriter */
+#typewriter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+  border-right: 3px solid #9b5cff;
+  width: fit-content;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Fade-in direto (Hero) */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Fade-in scroll */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Botões container */
+.buttons {
+  display: flex;
+  gap: 1rem; /* espaço entre os botões */
+  margin-top: 1rem;
+}
+
+/* Estilo base dos botões */
+.btn {
+  background: linear-gradient(90deg, #6f34d8, #9b5cff);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(155, 92, 255, 0.4);
+}
+
+/* Hover com brilho */
+.btn:hover {
+  background: linear-gradient(90deg, #9b5cff, #b07dff);
+  box-shadow: 0 0 15px rgba(155, 92, 255, 0.8);
+  transform: translateY(-2px);
+}
