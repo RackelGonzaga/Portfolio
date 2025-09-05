@@ -6,6 +6,19 @@
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        entry.target.classList.remove('hidden');
+      }
+    });
+  });
+
+  const sections = document.querySelectorAll('.hidden');
+  sections.forEach(section => observer.observe(section));
+</script>
 <body>
 
 <!-- header -->
@@ -50,51 +63,99 @@
   </div>
 </section>
 
-<!-- Formação e Experiência -->
-<section id="journey" class="journey hidden">
+<!-- Sobre -->
+<section id="about" class="about">
+  <div class="profile-pic">
+    <img src="img/minha.jpg" alt="Foto de perfil">
+  </div>
+  <div class="profile-text">
+    <p>
+      Sou apaixonada por tecnologia desde pequena. Minha jornada acadêmica começou em 2024, em Engenharia de Software, mas a instituição infelizmente encerrou suas atividades. Em 2025 iniciei Ciência da Computação na Unicap, e desde então minha paixão pela área só aumentou. Tenho interesse especial em desenvolvimento Back-end e estou sempre em busca de aprender novas linguagens e expandir meus conhecimentos.
+    </p>
+    <div class="buttons">
+      <a href="#projects" class="btn">Portfólio</a>
+      <a href="curriculo.pdf" download class="btn">Currículo</a>
+    </div>
+    <div class="stats">
+      <p><strong>2+</strong> anos de experiência</p>
+      <p><strong>-0</strong> projetos</p>
+    </div>
+  </div>
+</section>
+  <!--Formação-->
+<section id="education" class="timeline">
   <h2>Minha Jornada Acadêmica</h2>
-  <div class="journey-container">
-    <!-- Educação -->
-    <div class="journey-box">
-      <h3>Educação</h3>
-      <ul>
-        <li><span>2024</span> Engenharia de Software - Damas</li>
-        <li><span>2025</span> Ciência da Computação - Unicap</li>
-      </ul>
+  
+  <div class="timeline-item">
+    <span class="year">2024</span>
+    <div class="content">
+      <h3>Engenharia de Software</h3>
+      <p>Damas</p>
+    </div>
+  </div>
+  
+  <div class="timeline-item">
+    <span class="year">2025</span>
+    <div class="content">
+      <h3>Ciência da Computação</h3>
+      <p>Unicap</p>
     </div>
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="skills hidden">
+<section id="skills" class="skills">
   <h2>Ferramentas e Habilidades</h2>
+  
   <div class="skills-container">
-    <div class="tools">
+
+<!-- Ferramentas -->
+    <div class="card">
       <h3>Ferramentas</h3>
       <ul>
-        <li>VS Code</li>
+        <li>VSCode</li>
         <li>Git & GitHub</li>
       </ul>
     </div>
-    <div class="skill-bars">
+
+    <!-- Skills -->
+    <div class="card">
       <h3>Skills</h3>
-      <div class="bar"><span>HTML5</span><div class="progress" style="width:95%"></div></div>
-      <div class="bar"><span>CSS</span><div class="progress" style="width:90%"></div></div>
-      <div class="bar"><span>JavaScript</span><div class="progress" style="width:85%"></div></div>
-      <div class="bar"><span>Python</span><div class="progress" style="width:80%"></div></div>
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress"><div style="width: 60%"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress"><div style="width: 60%"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress"><div style="width: 30%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Python</span>
+        <div class="progress"><div style="width: 70%"></div></div>
+      </div>
     </div>
+
   </div>
 </section>
-
+  
 <!-- Projetos -->
-<section id="projects" class="projects hidden">
+<section id="projects" class="projects">
   <h2>Meus Projetos</h2>
-  <p>Em breve vou colocar alguns projetos aqui 🚀</p>
-</section>
+  <div class="projects-container">
+
+    <!-- Card de placeholder -->
+    <div class="project-card">
+      <h3>🚀 Em breve</h3>
+      <p>Vou colocar alguns projetos aqui.</p>
+    </div>
 
 <!-- Contato -->
-<footer id="contact" class="hidden">
-  <p>Entre em contato: <a href="mailto:gonzagarackel@gmail.com">gonzagarackel@gmail.com</a></p>
+<footer id="contact" class="footer">
+  <p>Entre em contato:</p>
+  <a href="mailto:gonzagarackel@gmail.com">gonzagarackel@gmail.com</a>
 </footer>
 
 <script src="script.js"></script>
